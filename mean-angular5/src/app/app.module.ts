@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookCreateComponent } from './book-create/book-create.component';
 
 const appRoutes: Routes = [
   {
@@ -16,6 +18,17 @@ const appRoutes: Routes = [
     component: BookComponent,
     data: { title: 'Book List' }
   },
+   {
+    path: 'book-create',
+    component: BookCreateComponent,
+    data: { title: 'Create Book' }
+  },
+ {
+    path: 'book-details/:id',
+    component: BookDetailComponent,
+    data: { title: 'Book Details' }
+  },
+
   { path: '',
     redirectTo: '/books',
     pathMatch: 'full'
@@ -25,7 +38,9 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent
+    BookComponent,
+    BookDetailComponent,
+    BookCreateComponent
   ],
   imports: [
     BrowserModule,
