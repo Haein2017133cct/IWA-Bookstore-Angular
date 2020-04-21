@@ -7,8 +7,10 @@ var bodyParser = require('body-parser');
 var book = require('./routes/book');
 var app = express();
 var mongoose = require('mongoose');
+var port = process.env.PORT || 3000;
+
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/mean-angular5', { useMongoClient: true, promiseLibrary: require('bluebird') })
+mongoose.connect('mongodb+srv://test:ccttestuser@cluster0-fgbfr.mongodb.net/test?retryWrites=true&w=majority', { useMongoClient: true, promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
@@ -26,14 +28,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-mongoose.connect('mongodb+srv://test:ccttestuser@cluster0-fgbfr.mongodb.net/test?retryWrites=true&w=majority');
-mongoose.connection.on('error', (err) => {
-    console.log('Mongodb Error: ', err);
-    process.exit();
-});
-mongoose.connection.on('connected', () => {
-    console.log('MongoDB is successfully connected');
-});
+
 
 // error handler
 app.use(function(err, req, res, next) {
