@@ -26,6 +26,15 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+mongoose.connect('mongodb+srv://test:ccttestuser@cluster0-fgbfr.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connection.on('error', (err) => {
+    console.log('Mongodb Error: ', err);
+    process.exit();
+});
+mongoose.connection.on('connected', () => {
+    console.log('MongoDB is successfully connected');
+});
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
