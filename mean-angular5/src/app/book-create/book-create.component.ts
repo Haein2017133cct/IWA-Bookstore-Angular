@@ -10,8 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BookCreateComponent implements OnInit {
 
-  book = {};
-
+book: any = {};
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {

@@ -10,8 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BookDetailComponent implements OnInit {
 
-  book = {};
-// added router for delete fuction
+book: any = {};// added router for delete fuction
 constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
