@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookCreateComponent } from './book-create/book-create.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -22,6 +23,11 @@ const appRoutes: Routes = [
     path: 'book-create',
     component: BookCreateComponent,
     data: { title: 'Create Book' }
+  },
+    {
+    path: 'book-edit/:id',
+    component: BookEditComponent,
+    data: { title: 'Edit Book' }
   },
  {
     path: 'book-details/:id',
@@ -40,13 +46,14 @@ const appRoutes: Routes = [
     AppComponent,
     BookComponent,
     BookDetailComponent,
-    BookCreateComponent
+    BookCreateComponent,
+    BookEditComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
      //  AppRoutingModule
-    //FormsModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
     { enableTracing: true } // <-- debugging purposes only

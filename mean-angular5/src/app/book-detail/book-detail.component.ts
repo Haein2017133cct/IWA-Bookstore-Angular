@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
-
+import { ActivatedRoute, Router } from '@angular/router';
+//added router to import with activated route for delete
 @Component({
   selector: 'app-book-detail',
   templateUrl: './book-detail.component.html',
@@ -11,8 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class BookDetailComponent implements OnInit {
 
   book = {};
-
-  constructor(private route: ActivatedRoute, private http: HttpClient) { }
+// added router for delete fuction
+constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
     this.getBookDetail(this.route.snapshot.params['id']);
@@ -23,5 +23,15 @@ export class BookDetailComponent implements OnInit {
       this.book = data;
     });
   }
+
+  deleteBook(id) {
+  this.http.delete('/book/'+id)
+    .subscribe(res => {
+        this.router.navigate(['/books']);
+      }, (err) => {
+        console.log(err);
+      }
+    );
+}
 
 }

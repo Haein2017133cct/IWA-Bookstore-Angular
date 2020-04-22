@@ -15,7 +15,7 @@
 				<th>published_year</th>
 				<th>publisher</th>
 				<th>updated_date</th>
-
+        <th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,7 +27,7 @@
 				<td>{{ book.published_year }}</td>
 				<td>{{ book.publisher }}</td>
 				<td>{{ book.updated_date }}</td>
-
+        <td><a [routerLink]="['/book-details', book._id]">show detail</a></td>
 			</tr>
 		</tbody>
 	</table>
