@@ -1,0 +1,26 @@
+<div class="container">
+	<h1>{{ book.title }}</h1>
+	<dl class="list">
+		<dt>ISBN</dt>
+		<dd>{{ book.isbn }}</dd>
+		<dt>Author</dt>
+		<dd>{{ book.author }}</dd>
+		<dt>Title</dt>
+		<dd>{{ book.title }}</dd>
+		<dt>Publisher</dt>
+		<dd>{{ book.publisher }}</dd>
+		<dt>published_year</dt>
+		<dd>{{ book.published_year }}</dd>
+
+		<dt>Update Date</dt>
+		<dd>{{ book.updated_at | date:'short' }}</dd>
+	</dl>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<a [routerLink]="['/book-edit', book._id]" class="btn btn-success">EDIT</a>
+		<button class="btn btn-danger" type="button" (click)="deleteBook(book._id)">DELETE</button>
+	</div>
+</div>
+<!-- connect bookedit function Router link above and then button for delete-->
