@@ -26,7 +26,7 @@ constructor(private router: Router, private route: ActivatedRoute, private http:
   deleteBook(id) {
   this.http.delete('/book/'+id)
     .subscribe(res => {
-        this.router.navigate(['/books']);
+        this.router.navigate(['/']);
       }, (err) => {
         console.log(err);
       }

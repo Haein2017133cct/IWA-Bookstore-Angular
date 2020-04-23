@@ -26,9 +26,10 @@ book: any = {};
   updateBook(id, data) {
     this.book.updateBook=Date.now();
     this.http.put('/book/'+id, this.book)
-      .subscribe(res => {
-          let id = res['_id'];
-          this.router.navigate(['/book-details', id]);
+      .subscribe(res => { //book-details
+          // let id = res['_id']; //books
+          // this.router.navigate(['/book-details', id]);
+                  this.router.navigate(['/']);
         }, (err) => {
           console.log(err);
         }

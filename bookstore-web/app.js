@@ -23,7 +23,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json()); //application/json parshing
 app.use(bodyParser.urlencoded({'extended':'false'})); //application/x-www-form-urlencoded parsing
 app.use(express.static(path.join(__dirname, 'dist/bookstore-web')));
-app.use('/books', express.static(path.join(__dirname, 'dist'))); //open dist folder as static
+app.use('/', express.static(path.join(__dirname, 'dist'))); //open dist folder as static
 app.use('/book', book); // open book.js in routes
 
 /* error handler */
