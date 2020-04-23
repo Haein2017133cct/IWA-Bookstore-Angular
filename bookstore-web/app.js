@@ -5,7 +5,6 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-
 var book = require('./routes/book');
 var app = express();
 
@@ -19,7 +18,6 @@ mongoose.Promise = require('bluebird');
 mongoose.connect(process.env.mongoDB_URL, { useMongoClient: true, promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
-// later on we will put this*****************************************
 
 app.use(logger('dev'));
 app.use(bodyParser.json()); //application/json parshing

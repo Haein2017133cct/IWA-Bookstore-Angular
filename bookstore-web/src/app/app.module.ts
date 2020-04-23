@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
+
 const appRoutes: Routes = [
   {
     path: 'books',
