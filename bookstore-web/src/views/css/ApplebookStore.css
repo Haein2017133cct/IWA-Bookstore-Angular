@@ -59,11 +59,12 @@ h6 {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../../assets/images/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+
 }
 
 header.masthead .intro-text {
@@ -103,6 +104,7 @@ header.masthead .intro-text .intro-heading {
 
     font-family: 'Nanum Gothic';  }
 }
+
 #service{
     background: url('https://media.istockphoto.com/photos/wood-texture-background-light-weathered-rustic-oak-faded-wooden-picture-id1051014900?k=6&m=1051014900&s=170667a&w=0&h=4HQAyEh7IETmXj99zxgQkgg7MDGxwRawiS01k0HvHgo=')
  no-repeat center center fixed;

@@ -8,14 +8,15 @@ var bodyParser = require('body-parser');
 
 var book = require('./routes/book');
 var app = express();
+
 var mongoose = require('mongoose');
-
 // var port = process.env.PORT || 3000;
-
+require('dotenv').config({path: 'variables.env'});
 //db connection
 //the reason of adding `bluebird` modules is otherwise you will get warning
+//console.log(process.env.mongoDB_URL); // to verify mongodb env, type : node app in console
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb+srv://test:ccttestuser@cluster0-fgbfr.mongodb.net/test?retryWrites=true&w=majority', { useMongoClient: true, promiseLibrary: require('bluebird') })
+mongoose.connect(process.env.mongoDB_URL, { useMongoClient: true, promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 // later on we will put this*****************************************
