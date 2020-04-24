@@ -30,7 +30,8 @@
             ],
             "scripts": [
               "src/views/js/bootstrap.min.js",
-               "src/views/js/jquery.min.js"
+               "src/views/js/jquery.min.js",
+               "src/views/js/ApplebookStore.js"
             ]
           },
           "configurations": {

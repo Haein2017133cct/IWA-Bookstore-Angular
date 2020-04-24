@@ -10,7 +10,7 @@ router.get('/', bookCtrl.getbooks);
 /* get a book by id */
 router.get('/:id',bookCtrl.getbook);
 /* get by author and return with title and isbn */
-router.get('/:author', bookCtrl.getbookByAuthor);
+router.get('/author/:author', bookCtrl.getbookByAuthor);
 /* crate a book */
 router.post('/',bookCtrl.createBooks);
 /* update a book */
