@@ -28,6 +28,7 @@
   },
 
   /***/
+<<<<<<< HEAD
   "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/views/css/bootstrap.min.css":
   /*!**********************************************************************************************************************************************************************************!*\
     !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./src/views/css/bootstrap.min.css ***!
@@ -42,6 +43,8 @@
   },
 
   /***/
+=======
+>>>>>>> 78a24551aacf6cfdf511d4f5ad8cb5635d6eb6f8
   "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
   /*!****************************************************************************!*\
     !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
@@ -391,43 +394,10 @@
   },
 
   /***/
-  "./src/views/css/bootstrap.min.css":
-  /*!*****************************************!*\
-    !*** ./src/views/css/bootstrap.min.css ***!
-    \*****************************************/
-
-  /*! no static exports found */
-
-  /***/
-  function srcViewsCssBootstrapMinCss(module, exports, __webpack_require__) {
-    var api = __webpack_require__(
-    /*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
-    "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-
-    var content = __webpack_require__(
-    /*! !../../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/src??embedded!./bootstrap.min.css */
-    "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/views/css/bootstrap.min.css");
-
-    content = content.__esModule ? content["default"] : content;
-
-    if (typeof content === 'string') {
-      content = [[module.i, content, '']];
-    }
-
-    var options = {};
-    options.insert = "head";
-    options.singleton = false;
-    var update = api(content, options);
-    var exported = content.locals ? content.locals : {};
-    module.exports = exported;
-    /***/
-  },
-
-  /***/
   3:
-  /*!***************************************************************************************************!*\
-    !*** multi ./src/styles.css ./src/views/css/ApplebookStore.css ./src/views/css/bootstrap.min.css ***!
-    \***************************************************************************************************/
+  /*!*****************************************************************!*\
+    !*** multi ./src/styles.css ./src/views/css/ApplebookStore.css ***!
+    \*****************************************************************/
 
   /*! no static exports found */
 
@@ -437,6 +407,7 @@
     /*! C:\Users\Haein.kim\Documents\Test2\bookstore-web\src\styles.css */
     "./src/styles.css");
 
+<<<<<<< HEAD
     __webpack_require__(
     /*! C:\Users\Haein.kim\Documents\Test2\bookstore-web\src\views\css\ApplebookStore.css */
     "./src/views/css/ApplebookStore.css");
@@ -444,6 +415,11 @@
     module.exports = __webpack_require__(
     /*! C:\Users\Haein.kim\Documents\Test2\bookstore-web\src\views\css\bootstrap.min.css */
     "./src/views/css/bootstrap.min.css");
+=======
+    module.exports = __webpack_require__(
+    /*! /workspace/Test/bookstore-web/src/views/css/ApplebookStore.css */
+    "./src/views/css/ApplebookStore.css");
+>>>>>>> 78a24551aacf6cfdf511d4f5ad8cb5635d6eb6f8
     /***/
   }
 }, [[3, "runtime"]]]);
