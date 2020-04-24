@@ -1,0 +1,9 @@
+diff a/bookstore-web/package.json b/bookstore-web/package.json	(rejected hunks)
+@@ -27,6 +27,7 @@
+     "mongoose": "^5.9.10",
+ =======
+     "jquery": "^3.5.0",
++>>>>>>> 78a24551aacf6cfdf511d4f5ad8cb5635d6eb6f8
+     "morgan": "^1.10.0",
+     "rxjs": "~6.5.4",
+     "serve-favicon": "^2.5.0",
