@@ -16,9 +16,9 @@ exports.getbook =  function(req, res, next) {
   });
 };
 
-/* get by author and return with all fields */
-exports.getbookByAuthor = function(req, res){
-    Book.find({author: req.params.author}, {},  function(err, books){
+/* get by ISBN and return with all fields */
+exports.getbookByISBN = function(req, res){
+    Book.find({isbn: req.params.isbn}, {},  function(err, books){
         if(err) return res.status(500).json({error: err});
         if(books.length === 0) return res.status(404).json({error: 'book not found'});
         res.json(books);

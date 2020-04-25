@@ -13,11 +13,12 @@ export class BookSearchComponent implements OnInit {
 
   ngOnInit() {
     
-      this.getbookByAuthor(this.route.snapshot.params['author']);
+      this.getbookByISBN(this.route.snapshot.params['isbn']);
+      
   }
 
-   getbookByAuthor(author) {
-    this.http.get('/book/author/'+author)
+   getbookByISBN(isbn) {
+    this.http.get('/book/isbn/'+isbn)
     .subscribe(data => {
       this.books = data;
     });

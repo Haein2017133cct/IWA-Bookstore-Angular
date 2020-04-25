@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     data: { title: 'Book Details' }
   },
   {
-    path: 'book-search/:author',
+    path: 'book-search/:isbn',
     component: BookSearchComponent,
     data: { title: 'Book Search' }
   }

@@ -281,7 +281,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         title: 'Book Details'
       }
     }, {
-      path: 'book-search/:author',
+      path: 'book-search/:isbn',
       component: _book_search_book_search_component__WEBPACK_IMPORTED_MODULE_10__["BookSearchComponent"],
       data: {
         title: 'Book Search'
@@ -1206,14 +1206,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(BookSearchComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.getbookByAuthor(this.route.snapshot.params['author']);
+          this.getbookByISBN(this.route.snapshot.params['isbn']);
         }
       }, {
-        key: "getbookByAuthor",
-        value: function getbookByAuthor(author) {
+        key: "getbookByISBN",
+        value: function getbookByISBN(isbn) {
           var _this5 = this;
 
-          this.http.get('/book/author/' + author).subscribe(function (data) {
+          this.http.get('/book/isbn/' + isbn).subscribe(function (data) {
             _this5.books = data;
           });
         }
@@ -1554,8 +1554,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "onSubmit",
-        value: function onSubmit(author) {
-          this.router.navigateByUrl('/book-search/' + author);
+        value: function onSubmit(isbn) {
+          this.router.navigateByUrl('/book-search/' + isbn);
         }
       }, {
         key: "deleteBook",
@@ -1596,8 +1596,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       type: BookComponent,
       selectors: [["app-book"]],
       decls: 109,
-      vars: 11,
-      consts: [[1, "container"], [1, "col-lg-8", "mx-auto", "card-body"], [1, "mt-5"], [1, "table"], [4, "ngFor", "ngForOf"], [1, "col-lg-12", "card-body", "p-10"], ["id", "nav-tab", "role", "tablist", 1, "nav", "nav-tabs"], ["id", "nav-search-tab", "data-toggle", "tab", "href", "#nav-search", "role", "tab", "aria-controls", "nav-search", "aria-selected", "true", 1, "nav-item", "nav-link", "active"], ["id", "nav-add-tab", "data-toggle", "tab", "href", "#nav-add", "role", "tab", "aria-controls", "nav-add", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-tabContent", 1, "tab-content"], ["id", "nav-search", "role", "tabpanel", "aria-labelledby", "nav-search-tab", 1, "tab-pane", "fade", "show", "active"], ["for", "search"], ["novalidate", "", 1, "needs-validation", 3, "ngSubmit"], ["searchForm", "ngForm"], [1, "row"], [1, "col"], ["type", "text", "placeholder", "Search by author", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["author", ""], [1, "invalid-feedback"], ["type", "submit", "id", "searchBt", 1, "btn", "btn-outline-dark", 3, "disabled"], ["id", "nav-add", "role", "tabpanel", "aria-labelledby", "nav-add-tab", 1, "tab-pane", "fade"], ["id", "bookAdd", "novalidate", "", 1, "needs-validation", 3, "ngSubmit"], ["bookForm", "ngForm"], ["for", "addition"], [1, "form-row"], [1, "col-md-4", "mb-3"], ["placeholder", "Genre", "name", "sec_genre", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["value", "", "disabled", "", "selected", ""], ["value", "Romance/Erotica"], ["value", "Crime/Mystery"], ["value", "Religious/Inspirational"], ["value", "Science Fiction/Fantasy"], ["value", "Horror"], ["id", "bookaddisbn", "type", "text", "pattern", "^[0-9-]*$", "name", "isbn", "placeholder", "ISBN", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], [1, "valid-feedback"], ["type", "text", "name", "author", "pattern", "^[a-zA-Z\\s\\.]*$", "placeholder", "Author", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "text", "name", "title", "pattern", "^[a-zA-Z_0-9@\\!#\\$\\^%&*()+=\\-[]\\\\\\';,\\.\\/\\{\\}\\|\\]*$", "placeholder", "Title", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "text", "name", "publisher", "pattern", "^[a-zA-Z\\s\\.]*$", "placeholder", "Publisher", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "text", "name", "publishedyear", "pattern", "^[0-9]*$", "placeholder", "Publisher year", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "text", "name", "price", "pattern", "^[0-9]*$", "placeholder", "price", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], [1, "form-group"], ["type", "submit", 1, "btn", "btn-outline-dark", 3, "disabled"], [1, "btn", "btn-outline-dark", "button1", 3, "routerLink"], ["type", "button", 1, "btn", "btn-outline-dark", "button1", 3, "click"]],
+      vars: 10,
+      consts: [[1, "container"], [1, "col-lg-8", "mx-auto", "card-body"], [1, "mt-5"], [1, "table"], [4, "ngFor", "ngForOf"], [1, "col-lg-12", "card-body", "p-10"], ["id", "nav-tab", "role", "tablist", 1, "nav", "nav-tabs"], ["id", "nav-search-tab", "data-toggle", "tab", "href", "#nav-search", "role", "tab", "aria-controls", "nav-search", "aria-selected", "true", 1, "nav-item", "nav-link", "active"], ["id", "nav-add-tab", "data-toggle", "tab", "href", "#nav-add", "role", "tab", "aria-controls", "nav-add", "aria-selected", "false", 1, "nav-item", "nav-link"], ["id", "nav-tabContent", 1, "tab-content"], ["id", "nav-search", "role", "tabpanel", "aria-labelledby", "nav-search-tab", 1, "tab-pane", "fade", "show", "active"], ["for", "search"], ["novalidate", "", 1, "needs-validation", 3, "ngSubmit"], ["searchForm", "ngForm"], [1, "row"], [1, "col"], ["type", "text", "placeholder", "Search by ISBN", "required", "", 1, "form-control"], ["isbn", ""], [1, "invalid-feedback"], ["type", "submit", "id", "searchBt", 1, "btn", "btn-outline-dark", 3, "disabled"], ["id", "nav-add", "role", "tabpanel", "aria-labelledby", "nav-add-tab", 1, "tab-pane", "fade"], ["id", "bookAdd", "novalidate", "", 1, "needs-validation", 3, "ngSubmit"], ["bookForm", "ngForm"], ["for", "addition"], [1, "form-row"], [1, "col-md-4", "mb-3"], ["placeholder", "Genre", "name", "sec_genre", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["value", "", "disabled", "", "selected", ""], ["value", "Romance/Erotica"], ["value", "Crime/Mystery"], ["value", "Religious/Inspirational"], ["value", "Science Fiction/Fantasy"], ["value", "Horror"], ["id", "bookaddisbn", "type", "text", "pattern", "^[0-9-]*$", "name", "isbn", "placeholder", "ISBN", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], [1, "valid-feedback"], ["type", "text", "name", "author", "pattern", "^[a-zA-Z\\s\\.]*$", "placeholder", "Author", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "text", "name", "title", "pattern", "^[a-zA-Z_0-9@\\!#\\$\\^%&*()+=\\-[]\\\\\\';,\\.\\/\\{\\}\\|\\]*$", "placeholder", "Title", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "text", "name", "publisher", "pattern", "^[a-zA-Z\\s\\.]*$", "placeholder", "Publisher", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "text", "name", "publishedyear", "pattern", "^[0-9]*$", "placeholder", "Publisher year", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], ["type", "text", "name", "price", "pattern", "^[0-9]*$", "placeholder", "price", "required", "", 1, "form-control", 3, "ngModel", "ngModelChange"], [1, "form-group"], ["type", "submit", 1, "btn", "btn-outline-dark", 3, "disabled"], [1, "btn", "btn-outline-dark", "button1", 3, "routerLink"], ["type", "button", 1, "btn", "btn-outline-dark", "button1", 3, "click"]],
       template: function BookComponent_Template(rf, ctx) {
         if (rf & 1) {
           var _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
@@ -1718,7 +1718,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "label", 11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, " \u25CE Search Item(title or isbn).");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, " \u25CE Search Item(isbn).");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1736,17 +1736,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div", 15);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "input", 16, 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function BookComponent_Template_input_ngModelChange_43_listener($event) {
-            return ctx.book.author = $event;
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](43, "input", 16, 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div", 18);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, "Please provide author's name you wish to find ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, "Please provide ISBN's number you wish to find ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2008,11 +2002,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.books);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.book.author);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](21);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", !_r1.form.valid);
 
@@ -2049,7 +2039,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", !_r3.form.invalid);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_x"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["PatternValidator"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_x"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["PatternValidator"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"]],
       styles: [".button1\r\n{\r\n    height :35px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYm9vay9ib29rLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksWUFBWTtBQUNoQiIsImZpbGUiOiJzcmMvYXBwL2Jvb2svYm9vay5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ1dHRvbjFcclxue1xyXG4gICAgaGVpZ2h0IDozNXB4O1xyXG59XHJcbiJdfQ== */"],
       encapsulation: 2
     });

@@ -9,8 +9,8 @@ var bookCtrl = require('../controller/book-controller');
 router.get('/', bookCtrl.getbooks);
 /* get a book by id */
 router.get('/:id',bookCtrl.getbook);
-/* get by author and return with title and isbn */
-router.get('/author/:author', bookCtrl.getbookByAuthor);
+/* get by ISBN and return with title and isbn */
+router.get('/isbn/:isbn', bookCtrl.getbookByISBN);
 /* crate a book */
 router.post('/',bookCtrl.createBooks);
 /* update a book */

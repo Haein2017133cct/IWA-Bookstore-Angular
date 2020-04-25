@@ -24,8 +24,8 @@ export class BookComponent implements OnInit {
     });
   }
  
-  onSubmit(author : String) {
-    this.router.navigateByUrl('/book-search/'+author);
+  onSubmit(isbn : String) {
+    this.router.navigateByUrl('/book-search/'+isbn);
 }
 
   deleteBook(id) {
