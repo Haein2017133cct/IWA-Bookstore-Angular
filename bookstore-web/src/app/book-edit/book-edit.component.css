@@ -5,3 +5,17 @@
 
 }
 
+#align{
+  text-align:center;
+}
+
+.container {
+  display:inline-block;
+  zoom:1;
+  display:inline;
+}
+.col-md-6{
+
+  float:none;
+  margin:auto;
+}

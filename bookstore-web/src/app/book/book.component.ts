@@ -17,13 +17,14 @@ export class BookComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
+    this.router.onSameUrlNavigation = "reload"; 
      //  this.http.get('http://localhost:3000/books').subscribe(data => {
     this.http.get('/book').subscribe(data => {
       this.books = data;
     });
   }
  
-  onSubmit(author) {
+  onSubmit(author : String) {
     this.router.navigateByUrl('/book-search/'+author);
 }
 

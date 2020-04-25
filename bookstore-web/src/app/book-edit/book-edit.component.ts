@@ -29,7 +29,8 @@ book: any = {};
       .subscribe(res => { //book-details
           // let id = res['_id']; //books
           // this.router.navigate(['/book-details', id]);
-                  this.router.navigate(['/']);
+                //  this.router.navigate(['/']);
+                  this.router.navigateByUrl("/")
         }, (err) => {
           console.log(err);
         }
