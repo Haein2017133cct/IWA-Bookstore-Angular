@@ -7,7 +7,9 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var book = require('./routes/book');
 var app = express();
-
+//security feature 
+var expAutoSan = require('express-autosanitizer');//validation
+var helmet = require('helmet');
 var mongoose = require('mongoose');
 // var port = process.env.PORT || 3000;
 require('dotenv').config({path: 'variables.env'});
@@ -25,6 +27,8 @@ app.use(bodyParser.urlencoded({'extended':'false'})); //application/x-www-form-u
 app.use(express.static(path.join(__dirname, 'dist/bookstore-web')));
 app.use('/', express.static(path.join(__dirname, 'dist'))); //open dist folder as static
 app.use('/book', book); // open book.js in routes
+app.use(expAutoSan.allUnsafe);
+app.use(helmet());
 
 /* error handler */
 app.use(function(req, res, next) {
