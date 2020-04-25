@@ -16,16 +16,16 @@ exports.getbook =  function(req, res, next) {
   });
 };
 
-/* get by author and return with title and isbn */
+/* get by author and return with all fields */
 exports.getbookByAuthor = function(req, res){
-    Book.find({author: req.params.author}, {_id: 0, title: 1, isbn: 1},  function(err, books){
+    Book.find({author: req.params.author}, {},  function(err, books){
         if(err) return res.status(500).json({error: err});
         if(books.length === 0) return res.status(404).json({error: 'book not found'});
         res.json(books);
     })
   };
 
-/* crate a book */
+/* create a book */
 exports.createBooks = function(req, res, next) {
   Book.create(req.body, function (err, post) {
     if (err) return next(err);

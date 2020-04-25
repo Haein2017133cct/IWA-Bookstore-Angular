@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="col-lg-8 mx-auto   card-body ">
+		<h1 class="mt-5">The result of book search
+		</h1>
+	</div>
+	<!-- Book list -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ISBN</th>
+				<th>Author</th>
+				<th>Title</th>
+				<th>Publisher</th>
+				<th>Published_year</th>
+				<th>Genre</th>
+				<th>Price</th>
+				<th>Updated_date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let book of books">
+				<td>{{ book.isbn }}</td>
+				<td>{{ book.author }}</td>
+				<td>{{ book.title }}</td>
+				<td>{{ book.publisher }}</td>
+				<td>{{ book.published_year }}</td>
+				<td>{{ book.genre }}</td>
+				<td>{{ book.price }}</td>
+				<td>{{ book.updated_date }}</td>
+				<!-- /book-details -->
+				
+			</tr>
+		</tbody>
+	</table>
+</div>

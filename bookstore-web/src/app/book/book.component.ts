@@ -22,13 +22,10 @@ export class BookComponent implements OnInit {
       this.books = data;
     });
   }
-  // getbookByAuthor(author) {
-  //   this.http.get('/book/'+author)
-  //   .subscribe(data => {
-  //     this.book = data;
-  //   });
-  // }
-
+ 
+  onSubmit(author) {
+    this.router.navigateByUrl('/book-search/'+author);
+}
 
   deleteBook(id) {
     this.http.delete('/book/' + id)

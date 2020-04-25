@@ -3,6 +3,7 @@
 		<h1 class="mt-5">The list of books
 		</h1>
 	</div>
+	
 	<!-- Book list -->
 	<table class="table">
 		<thead>
@@ -51,18 +52,18 @@
 		<div class="tab-pane fade show active" id="nav-search" role="tabpanel" aria-labelledby="nav-search-tab">
 			<!-- for search  -->
 			<div class="col-lg-12 card-body p-10    ">
-			<!-- //	<form (ngSubmit)="getbookByAuthor('searchID')" #bookForm="ngForm"> -->
 					<label for="search"> ◎ Search Item(title or isbn).</label>
+					<form class="needs-validation"  (ngSubmit)="onSubmit(book.author)" #searchForm="ngForm" class="needs-validation" novalidate>
 					<div class="row">
 			
 						<div class="col">
-							
-							<input class="form-control" type="text" id="searchID">
-            			</div>
-							<button type="search"  id="searchBt"  class="btn btn-outline-dark" disabled>Search</button>
+							<input  type="text" class="form-control" [(ngModel)]="book.author" placeholder="search by author"  required>
+							<div class="invalid-feedback">Please provide author's name you wish to find </div>
+						</div>
+							<button type="submit"  id="searchBt"  class="btn btn-outline-dark" [disabled]="!searchForm.form.valid" >Search</button>
 						
 						</div>
-			<!-- //	</form> -->
+					</form> 
 				
 			</div>
 			<!-- search end  -->

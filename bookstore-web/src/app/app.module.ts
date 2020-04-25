@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
+import { BookSearchComponent } from './book-search/book-search.component';
 
 const appRoutes: Routes = [
   {
@@ -27,6 +28,11 @@ const appRoutes: Routes = [
     path: 'book-details/:id',
     component: BookDetailComponent,
     data: { title: 'Book Details' }
+  },
+  {
+    path: 'book-search/:author',
+    component: BookSearchComponent,
+    data: { title: 'Book Search' }
   }
   ,
 
@@ -41,7 +47,8 @@ const appRoutes: Routes = [
     AppComponent,
     BookComponent,
     BookDetailComponent,
-    BookEditComponent
+    BookEditComponent,
+    BookSearchComponent
   ],
   imports: [
     BrowserModule,
