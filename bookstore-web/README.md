@@ -12,7 +12,7 @@ cd ./bookstore-web
 npm i - save express body-parser morgan  helmet express-autosanitizer mongoose dotenv path dotenv bluebir
 npm install -g @angular/cli
 ng serve
-npm start
+npm start   
 
 ## Code references
 Banto, Olutunmbi. “How to Deploy Angular Application to Heroku.” Medium, 4 Apr. 2020, itnext.io/
