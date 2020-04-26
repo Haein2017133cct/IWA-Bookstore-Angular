@@ -1,27 +1,40 @@
-# MeanAngular5
+# Bookstore
+##Technology
+node.js, angular 5, HTML, CSS, Heroku, mongoDB
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+## Note
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I tried heroku, But somehow get/create or update did not work properly but it is working locally.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+npm install
+cd ./bookstore-web
+npm i - save express body-parser morgan serve-favicon helmet express-autosanitizer mongoose dotenv path
+npm install -g @angular/cli
+ng serve
+npm start
 
-## Running unit tests
+## Code references
+haeinjane. “Haeinjane/IWA-Bookstore.” GitHub, 9 Apr. 2020, github.com/haeinjane/IWA-Bookstore. Accessed 26 Apr. 2020.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+CodeReading. 2020. Heroku + Mlab 프로젝트 업로드. [online] Available at: <https://code-reading.tistory.com/103?category=776832> [Accessed 26 April 2020].
 
-## Running end-to-end tests
+HTML5 Rocks - A resource for open web HTML5 developers. 2020. Constraint Validation: Native Client Side Validation For Web Forms - HTML5 Rocks. [online] Available at: <https://www.html5rocks.com/en/tutorials/forms/constraintvalidation/> [Accessed 26 April 2020].
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Jamaludin, D., 2020. Angular 8 Tutorial: REST API And Httpclient Examples. [online] Djamware.com. Available at: <https://www.djamware.com/post/5d8d7fc10daa6c77eed3b2f2/angular-8-tutorial-rest-api-and-httpclient-examples> [Accessed 26 April 2020].
 
-## Further help
+Jamaludin, D., 2020. MEAN Stack (Angular 5) CRUD Web Application Example. [online] Djamware.com. Available at: <https://www.djamware.com/post/5a0673c880aca7739224ee21/mean-stack-angular-5-crud-web-application-example#angular-cli> [Accessed 26 April 2020].
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Lee, U., 2020. Deploying Node.Js(Express) & Mongodb To Heroku | Poiemaweb. [online] PoiemaWeb. Available at: <https://poiemaweb.com/nodejs-heroku> [Accessed 26 April 2020].
+
+Lee, U., 2020. Deploying Node.Js(Express) & Mongodb To Heroku | Poiemaweb. [online] PoiemaWeb. Available at: <https://poiemaweb.com/nodejs-heroku> [Accessed 26 April 2020].
+
+Lee, U., 2020. Mongodb Shell - CRUD | Poiemaweb. [online] PoiemaWeb. Available at: <https://poiemaweb.com/mongdb-basics-shell-crud> [Accessed 26 April 2020].
+
+MDN Web Docs. 2020. Eventtarget.Addeventlistener(). [online] Available at: <https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener> [Accessed 26 April 2020].
+
+Medium. 2020. How To Deploy Angular Application To Heroku. [online] Available at: <https://itnext.io/how-to-deploy-angular-application-to-heroku-1d56e09c5147> [Accessed 26 April 2020].
+
+Morioh.com. 2020. Social Network For Programmers And Developers. [online] Available at: <https://morioh.com/p/9d5d5c475b95> [Accessed 26 April 2020].
+

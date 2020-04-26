@@ -1,3 +1,4 @@
+
 // call basic module of express
 var express = require('express');
 var path = require('path');
@@ -7,12 +8,12 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var book = require('./routes/book');
 var app = express();
-//security feature 
+//security feature  
 var expAutoSan = require('express-autosanitizer');//validation
 var helmet = require('helmet');
 var mongoose = require('mongoose');
 // var port = process.env.PORT || 3000;
-require('dotenv').config({path: 'variables.env'});
+require('dotenv').config();
 //db connection
 //the reason of adding `bluebird` modules is otherwise you will get warning
 //console.log(process.env.mongoDB_URL); // to verify mongodb env, type : node app in console

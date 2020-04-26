@@ -30,8 +30,8 @@
             ],
             "scripts": [
               "src/views/js/bootstrap.min.js",
-               "src/views/js/jquery.min.js",
-               "src/views/js/ApplebookStore.js"
+              "src/views/js/jquery.min.js",
+              "src/views/js/ApplebookStore.js"
             ]
           },
           "configurations": {
@@ -129,6 +129,6 @@
   },
   "defaultProject": "bookstore-web",
   "cli": {
-    "analytics": "4e20bd84-d512-4f20-ad67-e7705adc0796"
+    "analytics": false
   }
 }
