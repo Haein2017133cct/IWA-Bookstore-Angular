@@ -42,15 +42,16 @@
 <div class="col-lg-12 card-body p-10    ">
 	<nav>
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
-			<a class="nav-item nav-link active" id="nav-search-tab" data-toggle="tab" href="#nav-search" role="tab"
-				aria-controls="nav-search" aria-selected="true">Search</a>
-			<a class="nav-item nav-link" id="nav-add-tab" data-toggle="tab" href="#nav-add" role="tab"
+			<a class="nav-item nav-link" id="nav-search-tab" data-toggle="tab" href="#nav-search" role="tab"
+				aria-controls="nav-search" aria-selected="false">Search</a>
+				<!-- active -->
+				<a class="nav-item nav-link" id="nav-add-tab" data-toggle="tab" href="#nav-add" role="tab"
 				aria-controls="nav-add" aria-selected="false">Add</a>
 		</div>
 	</nav>
 
 	<div class="tab-content" id="nav-tabContent">
-		<div class="tab-pane fade show active" id="nav-search" role="tabpanel" aria-labelledby="nav-search-tab">
+		<div class="tab-pane fade" id="nav-search" role="tabpanel" aria-labelledby="nav-search-tab">
 			<!-- for search  -->
 			<div class="col-lg-12 card-body p-10    ">
 				<label for="search"> ◎ Search Item(isbn).</label>
@@ -72,7 +73,7 @@
 			</div>
 			<!-- search end  -->
 		</div>
-
+		<!-- show active -->
 		<div class="tab-pane fade" id="nav-add" role="tabpanel" aria-labelledby="nav-add-tab">
 			<!-- for addition   -->
 			<div class="col-lg-12 card-body p-10    ">
@@ -135,11 +136,11 @@
 
 						<div class="col-md-4 mb-3">
 							<input class="form-control" type="text" [(ngModel)]="book.price" name="price"
-								pattern="^[0-9]*$" placeholder="price" required>
+								pattern="^\d+(?:[.]?[\d]?[\d])?$" placeholder="price" required>
 							<div class="valid-feedback"> Looks good!</div>
 							<div class="invalid-feedback">Please provide it(only number). </div>
 						</div>
-
+						<!-- ^[0-9]*$ /only number-->
 						<div class="form-group">
 							<button type="submit" class="btn btn-outline-dark"
 								[disabled]="!bookForm.form.invalid">Add</button>

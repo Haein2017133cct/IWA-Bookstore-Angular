@@ -15,22 +15,28 @@ book: any = {};
 
   ngOnInit() {
     this.getBook(this.route.snapshot.params['id']);
+
   }
 
   getBook(id) {
     this.http.get('/book/'+id).subscribe(data => {
       this.book = data;
+
     });
+    
   }
 
   updateBook(id, data) {
+
     this.book.updateBook=Date.now();
     this.http.put('/book/'+id, this.book)
       .subscribe(res => { //book-details
           // let id = res['_id']; //books
           // this.router.navigate(['/book-details', id]);
-                //  this.router.navigate(['/']);
-                  this.router.navigateByUrl("/")
+            //      this.router.navigate(['/']);
+             this.router.navigateByUrl("/")
+             //   this.ngOnInit();
+
         }, (err) => {
           console.log(err);
         }
