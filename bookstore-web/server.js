@@ -19,7 +19,7 @@ var realapp = require('./app.js');
 var book = require('./routes/book');
 app.use('/book', book); // open book.js in routes
 app.use(realapp);
-app.use(logger('dev'));
+app.use(logger('dev'));  
 app.get('/', function(req,res) {
     
 res.sendFile(path.join(__dirname+'/dist/bookstore-web/index.html'));
