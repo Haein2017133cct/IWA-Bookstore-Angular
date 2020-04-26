@@ -47,6 +47,7 @@ saveBook() {
           let id = res['_id'];
          // this.router.navigate(['/books']);
          this.ngOnInit();
+        // this.router.navigateByUrl("/")
 
         }, (err) => {
           console.log(err);
