@@ -18,8 +18,6 @@ yarn-error.log*
 lerna-debug.log*
 
 
-//https://github.com/github/gitignore/blob/master/Node.gitignore
-
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 

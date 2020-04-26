@@ -1,9 +1,9 @@
 
+// author : Haein Kim 2017133
+//*******all reference are listed in readme file.
 // call basic module of express
 var express = require('express');
 var path = require('path');
-// call express midware
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var book = require('./routes/book');
